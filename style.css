@@ -1,0 +1,223 @@
+/* Reset & Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #3e2723;
+  color: #fff;
+  padding: 1rem 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.header-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #ffcc80;
+}
+
+/* Hero Section */
+.hero {
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin-top: 70px;
+}
+
+.hero-text {
+  width: 90%;
+  max-width: 800px;
+  padding: 0.7rem 1.2rem;
+  background: rgba(0,0,0,0.4); /* bayangan belakang tulisan */
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  bottom: 10px; /* diturunkan lebih ke bawah */
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* shadow tambahan */
+}
+
+.hero-text h2 {
+  font-size: 1.7rem; /* sedikit lebih kecil */
+  margin-bottom: 0.3rem;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7); /* shadow tulisan */
+}
+
+.hero-text p {
+  font-size: 0.95rem;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7); /* shadow tulisan */
+}
+
+
+/* Sections */
+.section {
+  width: 90%;
+  max-width: 1000px;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #4e342e;
+}
+
+/* Card Kopi */
+.card-container {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  width: 500px;   /* landscape lebih lebar */
+  height: 250px;  
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  transition: opacity 0.3s;
+}
+
+.card:hover .card-overlay {
+  opacity: 1;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+table td {
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table td:first-child {
+  font-weight: bold;
+  width: 40%;
+}
+
+/* Harga & WA */
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #4e342e;
+}
+
+.wa-button {
+  background-color: #25d366;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.wa-button:hover {
+  background-color: #128c7e;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #eee;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+footer a {
+  color: #25d366;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .hero-text h2 {
+    font-size: 1.5rem;
+  }
+  .hero-text p {
+    font-size: 0.85rem;
+  }
+  .card {
+    width: 90%;
+    height: 200px;
+  }
+}
